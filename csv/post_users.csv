@@ -1,0 +1,23 @@
+${test_number};${test_type};${name};${job};${expected_http_status_code};${test_desc}
+0;P;valid;valid;201;Send valid parameters
+1;P;exist;exist;201;send exist data param
+2;N;blank;valid;400;send blank name parameters
+3;N;space;valid;400;send space name parameters
+4;P;0;valid;201;send 0 name parameters
+5;P;E;valid;201;send E name parameters
+6;P;e;valid;201;send e name parameters
+7;P;ab;valid;201;send alphabet name parameters
+8;N;ab12;valid;400;send alphanumeric name parameters
+9;N;ab12!@;valid;400;send free text name parameters
+10;N;!@#$%^&*()_+;valid;400;send special characters name parameters
+11;N;1.23;valid;400;send decimal name parameters
+12;N;valid;blank;400;send blank job parameters
+13;N;valid;space;400;send space job parameters
+14;N;valid;0;400;send 0 job parameters
+15;P;valid;E;201;send E job parameters
+16;P;valid;e;201;send e job parameters
+17;P;valid;ab;201;send alphabet job parameters
+18;N;valid;ab12;400;send alphanumeric job parameters
+19;N;valid;ab12!@;400;send free text job parameters
+20;N;valid;!@#$%^&*()_+;400;send special characters job parameters
+21;N;valid;1.23;400;send decimal job parameters

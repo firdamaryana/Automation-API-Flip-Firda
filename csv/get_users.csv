@@ -1,0 +1,13 @@
+${test_number};${test_type};${page};${expected_http_status_code};${test_desc}
+0;P;valid;200;Send valid parameters
+1;P;blank;200;send blank page parameters
+2;N;space;400;send space page parameters
+3;N;0;200;send 0 page parameters
+4;N;E;400;send E page parameters
+5;N;e;400;send e page parameters
+6;N;ab;400;send alphabet page parameters
+7;N;ab12;400;send alphanumeric page parameters
+8;N;ab12!@;400;send free text page parameters
+9;N;!@#$%^&*()_+;400;send special characters page parameters
+10;N;1.23;400;send decimal page parameters
+11;N;999999999;400;send numeric 9 character page parameters
